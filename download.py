@@ -54,7 +54,7 @@ class Downloader:
         """
         
         ydl_opts = {
-            'format': 'bestaudio/best',
+            'format': 'bestaudio/best' if extension in ['mp3', 'm4a', 'wav'] else 'best[ext=mp4]/best',
             'http_headers': {
                 'User-Agent': random.choice([
                     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -62,16 +62,12 @@ class Downloader:
                     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36'
                 ]),
             },
-            'postprocessors': [{
-                'key': 'FFmpegExtractAudio',
-                'preferredcodec': extension,
-            }],
             'retries': 5,
             'fragment_retries': 5,
             'skip_unavailable_fragments': True,
             'extract_flat': False,
             'wait_for_video': (10, 30),
-            'outtmpl': set_filename,
+            'outtmpl': f'{set_filename}.{extension}',
             'quiet': False,
         }
 
