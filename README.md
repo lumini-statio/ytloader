@@ -5,6 +5,9 @@ CLI to download playlists and songs individualy with mp3 extension.
 > [!NOTE]
 > You can change the script to adapt the python version, dependencies or the program to your machine.
 
+> [!WARNING]
+> If you abuse of this tool, yt may block your computer, it's configured to avoid that, but it's not impossible.
+
 ## Install
 To install dependencies, clone or download the proyect, position your powershell on the root directory and run:
 
