@@ -22,15 +22,12 @@ if not:
 
 ## Use
 To execute, run:
-
+`.\venv\Scripts\activate`
 `python main.py`
-
-To know the CLI commands, run:
-
-`help`
 
 ## Commands
 
+- help: Returns all the commands info.
 - playlist: Provide the playlist url and the folder name where the songs will be placed.
 - list: Provide the playlist url and the program will tell you what songs and how much has that playlist.
 - song: Provide the song url and this will be placed on your downloads folder.
