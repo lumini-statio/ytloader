@@ -22,8 +22,8 @@ if not:
 
 ## Use
 To execute, run:
-`.\venv\Scripts\activate`
-`python main.py`
+1. `.\venv\Scripts\activate`
+2. `python main.py`
 
 ## Commands
 
